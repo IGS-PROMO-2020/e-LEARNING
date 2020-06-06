@@ -1,0 +1,15 @@
+#---- Ne pas lister le contenu du repertoire ----
+IndexIgnore *
+
+
+AuthUserFile "C:\wamp64\www\blog\admin\.htpasswd"
+AuthName "Veuillez vous identifiez"
+AuthType Basic
+
+  <Limit GET POST>
+  require valid-user
+    </Limit>
+    <IfModule mod_expires.c>
+     ExpiresActive On
+     ExpiresDefault "access plus 7200 seconds"
+     </IfModule>
